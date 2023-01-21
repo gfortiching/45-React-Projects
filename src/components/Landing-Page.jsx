@@ -1,22 +1,6 @@
-import { useRef, useState } from 'react'
-import "./css/Landing-Page.css"
 import Me from '/images/meTransparent.png'
-import Scroll from "../Functions/Scroll"
 
 function Landing() {
-
-    const next = useRef(null);
-
-    function GetToKnow() {
-
-        const [headText, setHeadText] = useState("Get to know me!");
-    
-        return (
-            <button className="cta" onClick={() => Scroll(next)} onMouseOver={() => setHeadText("Click to scroll down")} onMouseLeave={() => setHeadText("Get to know me!")}>
-            {headText}
-        </button>
-        )
-    }
 
     function Skills() {
 
@@ -36,9 +20,8 @@ function Landing() {
 
     return (
     <>
-    <main className="landing">
     <Skills />
-    <section className="landing">
+    <article>
         <div className="left">
             <div className="left-wrapper">
                 <h1 className="greet">Hey! &#128075;</h1>
@@ -49,10 +32,7 @@ function Landing() {
         <div className="right">
             <img src={Me} alt="" className="myImg" />
         </div>
-    </section>
-    <GetToKnow />
-    </main>
-    <section ref={next}></section>
+    </article>
     </>
 
 )};

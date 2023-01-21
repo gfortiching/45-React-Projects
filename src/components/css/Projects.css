@@ -1,9 +1,9 @@
-.about {
+.projects {
     min-height: 100vh;
     padding: 8%;
 }
 
-.about-section {
+.projects-section {
     height: 75vh;
     border: 2px solid var(--white);
 }

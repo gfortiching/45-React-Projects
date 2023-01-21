@@ -2,7 +2,7 @@ import "./ScrollToTop.css";
 
 function ScrollToTop() {
 
-    const icon = 'https://cdn-icons-png.flaticon.com/512/4671/4671098.png';
+    const icon = 'https://cdn-icons-png.flaticon.com/512/4315/4315710.png';
 
     return (
         <img src={icon} className="scrollToTop"/>

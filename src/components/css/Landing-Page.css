@@ -1,4 +1,4 @@
-main.landing {
+header.landing {
   background-color: var(--lightblue);
   display: flex;
   overflow: hidden;
@@ -7,7 +7,7 @@ main.landing {
   padding: 5% 9%;
 }
 
-section.landing {
+.landing article {
   display: flex;
   flex-wrap: wrap;
 }
@@ -24,7 +24,7 @@ section.landing {
 }
 
 .top-animation h1 {
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: bold;
   font-family: var(--secondary-font);
   color: var(--white);
