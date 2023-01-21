@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+  
+:root {
+    --primary-font: 'Arvo', serif;
+    --secondary-font: 'Lato', sans-serif;
+    --lightblue: #516f99;
+    --white: white;
+    --black: black;
+    --gray: gray;
+}

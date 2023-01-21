@@ -1,0 +1,239 @@
+main.landing {
+  background-color: var(--lightblue);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  padding: 5% 9%;
+}
+
+section.landing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Top Animation */
+
+.top-animation {
+  height: 10vh;
+  position: absolute;
+  top: 2%;
+  display: flex;
+  justify-content: center;
+  animation: move-rtl 15s linear infinite;
+}
+
+.top-animation h1 {
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  color: var(--white);
+  padding: 0 2rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+@keyframes move-rtl {
+  0% {
+    transform: translateX(110%);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+  
+
+.left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--white);
+    font-family: var(--primary-font);
+}
+
+.left-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: inherit;
+    padding-right: 2%;
+}
+
+.greet {
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.name {
+  font-size: 3em;
+}
+
+.cta {
+  justify-items: center;
+  bottom: 12%;
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 4px solid var(--white);
+  padding: 0.5% 1%;
+  border-radius: 0.25em;
+  width: 280px;
+  white-space: nowrap;
+  text-shadow: 0 0 0.125em rgb(15, 24, 101), 0 0 0.45em #ffffff;
+  box-shadow: inset 0 0 0.5em #ffffff, 0 0 0.5em 0 #ffffff;
+}
+
+.cta::before {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  background-color: var(--white);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(2em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(2em);
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.251);
+  box-shadow: 0 0 1em 0.5em #ffffff;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.cta:hover, .cta:focus {
+  text-shadow: none;
+}
+
+.cta:hover::after {
+  opacity: 1;
+}
+
+.myImg {
+  max-height: 80vh;
+  min-height: 50vh;
+  max-width: 100vw;
+  object-fit: cover;
+  position: relative;
+}
+
+  /** CSS Media Queries **/
+
+  @media all and (min-width: 992px) {
+
+    .greet {
+      font-size: 3em;
+      font-weight: 300;
+    }
+  
+    .name {
+      font-size: 3.5em;
+    }
+  }
+  
+  @media all and (min-width: 576px) and (max-width: 992px)  {
+
+    main.landing {
+      height: 100vh;
+      padding: 5%;
+      margin: auto;
+      justify-content: center;
+      position: relative;
+    }
+  
+    .myImg {
+      display: none;
+    }
+  
+    .greet {
+      font-size: 3em;
+      font-weight: 300;
+    }
+  
+    .name {
+      margin-top: 0.5em;
+      font-size: 3em;
+    }
+  
+    .left-wrapper {
+      margin: 0 3vw;
+      left: 0;
+      right: 0;
+      bottom: 20%;
+      position: absolute;
+      z-index: 999;
+    }
+  
+    .cta {
+      gap: 2em;
+      left: 0;
+      bottom: 7%;
+      right: 0;
+      position: absolute;
+      background-color: transparent;
+      text-align: center;
+      margin: auto;
+    }
+  }
+
+  @media all and (max-width: 576px) {
+
+    main.landing {
+      height: 100vh;
+      padding: 1em;
+      margin: auto;
+      justify-content: center;
+      position: relative;
+    }
+  
+    .myImg {
+      opacity: 0.5;
+      max-height: inherit;
+      min-height: 25vh;
+      max-width: 50vw;
+      display: none;
+    }
+  
+    .greet {
+      font-size: 2.5em;
+      font-weight: 300;
+    }
+  
+    .name {
+      margin-top: 0.5em;
+      font-size: 2.5em;
+    }
+  
+    .left-wrapper {
+      margin: 0 3vw;
+      left: 0;
+      right: 0;
+      bottom: 20%;
+      position: absolute;
+      z-index: 999;
+    }
+  
+    .cta {
+      gap: 2em;
+      left: 0;
+      bottom: 7%;
+      right: 0;
+      position: absolute;
+      background-color: transparent;
+      text-align: center;
+      margin: auto;
+    }
+  }

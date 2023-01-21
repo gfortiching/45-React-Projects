@@ -1,0 +1,23 @@
+.navigation {
+    height: 10vh;
+    width: 100%;
+    background-color: var(--lightblue);
+    color: var(--gray);
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+}
+
+.navigation ul {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    margin: auto 10px;
+}

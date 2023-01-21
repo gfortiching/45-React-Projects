@@ -1,0 +1,10 @@
+.scrollToTop {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    position: sticky;
+    top: 88%;
+    right: 2%;
+    float: right;
+    cursor: pointer;
+}
