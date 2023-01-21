@@ -3,7 +3,80 @@
     padding: 8%;
 }
 
+@media all and (min-width: 576px) and (max-width: 768px) {
+    .projects {
+        padding-top: 15%;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .projects {
+        padding-top: 20%;
+    }
+}
+
 .projects-section {
-    height: 75vh;
-    border: 2px solid var(--white);
+    min-height: 70vh;
+    border: 3px solid var(--color2);
+    border-radius: 1em;
+    padding: 5%;
+    box-shadow: 2px 2px 10px black;
+}
+
+.projects-section .title {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(19, 18, 18);
+    color: var(--white);
+    border-radius: 1em;
+    border: 3px solid white;
+    box-shadow: 5px 5px 20px black;
+}
+
+.projects-section h4 {
+    margin: 0;
+}
+
+.projects-section .text {
+    margin-top: 2em;
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.projects-section .text a {
+    text-decoration: none;
+    color: var(--lightblue);
+}
+
+.projects-section .text h5 {
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.projects-section .text h6 {
+    font-weight: 900;
+}
+
+/* Project 1 */
+
+.simpleCounter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% auto 0;
+    height: 100px;
+    width: 250px;
+    background-color: var(--color2);
+    border-radius: 1em;
+}
+
+.simpleCounter button {
+    background-color: var(--color1);
+    width: 50px;
+    height: 30px;
+}
+
+.simpleCounter h2 {
+    color: var(--color1);
 }

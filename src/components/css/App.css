@@ -15,8 +15,10 @@
     --white: white;
     --black: black;
     --gray: gray;
+    --color1: #f5eedc;
+    --color2: #222325;
 }
 
 .app {
-    background-color: var(--lightblue);
+    background-color: var(--color1);
 }
