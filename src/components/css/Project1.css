@@ -1,0 +1,20 @@
+.simpleCounter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% auto 0;
+    height: 100px;
+    width: 250px;
+    background-color: var(--color2);
+    border-radius: 1em;
+}
+
+.simpleCounter button {
+    background-color: var(--color1);
+    width: 50px;
+    height: 30px;
+}
+
+.simpleCounter h2 {
+    color: var(--color1);
+}

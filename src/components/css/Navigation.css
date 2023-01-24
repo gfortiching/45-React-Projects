@@ -1,7 +1,8 @@
 .navigation {
-    height: 8vh;
+    height: 9vh;
     width: 100%;
     background-color: var(--color1);
+    border-bottom: 2px solid var(--color2);
     position: sticky;
     top: 0;
 }
@@ -15,7 +16,6 @@
     padding: 0;
     margin: 0;
     color: var(--color2);
-    border-bottom: 3px solid var(--color2);
     font-family: var(--primary-font);
 }
 
@@ -31,4 +31,75 @@
 .navigation li:hover {
     color: #000;
     transition: 0.5s;
+}
+
+/* Nav Drawer */
+
+#navDrawer {
+    display: none;
+}
+
+.drawer-ul img {
+    width: 20px;
+}
+
+.drawer-ul {
+    padding: 5%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drawer-ul li {
+    font-size: 20px;
+    list-style: none;
+    padding: 0.5em 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    white-space: nowrap;
+}
+
+.drawer-ul li:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    white-space: nowrap;
+}
+
+.hideAnchor {
+    display: none;
+}
+
+.dashboardIcon {
+    margin: 1em 0 0;
+    padding: 0;
+    color: var(--color2);
+}
+
+@media all and (max-width: 768px) {
+    #navDrawer {
+        display: flex;
+        position: sticky;
+        float: left;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100vh;
+        z-index: 999;        
+        cursor: pointer;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: inherit;
+    }
+
+    .navigation ul {
+        display: none;
+    } 
 }

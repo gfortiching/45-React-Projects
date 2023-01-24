@@ -1,0 +1,38 @@
+.responsive-table {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+}
+
+.table {
+    width: 100%;
+}
+
+.table th {
+    min-width: 200px;
+}
+
+.search {
+    font-family: var(--secondary-font);
+    margin: 5% auto;
+}
+
+.search input {
+    width: 200px;
+    height: 25px;
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 2% auto;
+}
+
+.search button {
+    width: 100px;
+}
+
+.search .table {
+    text-align: start;
+}
+
+.search .table td {
+    text-align: start;
+}
