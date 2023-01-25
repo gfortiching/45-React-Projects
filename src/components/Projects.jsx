@@ -4,6 +4,7 @@ import Temperature from "./Project2";
 import SearchFilter from "./Project3";
 import BasicRegistration from "./Project4";
 import ReactQuizApp from "./Project5";
+import ReactNavbar from "./Project6";
 
 function Projects() {
     return (
@@ -73,6 +74,27 @@ function Projects() {
                     <h6>Topics covered: React Hooks, components, props, useState().</h6>
                 </div>
                 <ReactQuizApp />
+            </article>
+        </section>
+
+        <section className="projects">
+            <article className="projects-section">
+            <div className="title"><h4>PROJECT 6</h4></div>
+                <div className="text">
+                    <h5>React Navbar</h5>
+                    <h6>Topics covered: CSS styling along with flex and grid. React basics like components, state, etc.</h6>
+                </div>
+                <ReactNavbar />
+            </article>
+        </section>
+
+        <section className="projects">
+            <article className="projects-section">
+            <div className="title"><h4>PROJECT 7</h4></div>
+                <div className="text">
+                    <h5>React Navbar</h5>
+                    <h6>Topics covered: CSS styling along with flex and grid. React basics like components, state, etc.</h6>
+                </div>
             </article>
         </section>
         </>
