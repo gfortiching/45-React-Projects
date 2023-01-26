@@ -28,8 +28,8 @@ function App() {
         <button 
           className="cta" 
           onClick={() => Scroll(about)} 
-          onMouseOver={() => setHeadText("Click to scroll down")} 
-          onMouseLeave={() => setHeadText("Get to know me!")}>
+          onMouseOver={() => setHeadText("View Projects")} 
+          onMouseLeave={() => setHeadText("Start")}>
           {headText}
         </button>
     )
@@ -94,6 +94,7 @@ function App() {
         <>
         <nav className="navigation">
             <ul>
+                <li className="gfortiching" onClick={() => Scroll(landing)}>gfortiching</li>
                 <li onClick={() => Scroll(landing)}>home</li>
                 <li onClick={() => Scroll(about)}>about</li>
                 <li onClick={() => Scroll(projects)}>projects</li>

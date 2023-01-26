@@ -1,6 +1,7 @@
 header.landing {
-  background-color: var(--lightblue);
+  background-color: var(--color2);
   display: flex;
+  justify-content: space-between;
   overflow: hidden;
   position: relative;
   height: 100vh;
@@ -9,6 +10,7 @@ header.landing {
 
 .landing article {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -35,7 +37,7 @@ header.landing {
 
 @keyframes move-rtl {
   0% {
-    transform: translateX(110%);
+    transform: translateX(190%);
   }
 
   100% {

@@ -12,11 +12,12 @@
     --primary-font: 'Arvo', serif;
     --secondary-font: 'Lato', sans-serif;
     --lightblue: #516f99;
+    --darkblue: #252D4A;
     --white: white;
     --black: black;
     --gray: gray;
-    --color1: #f5eedc;
-    --color2: #222325;
+    --color1: #e4faff;
+    --color2: #3E3F46;
 }
 
 .app {

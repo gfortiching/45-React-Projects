@@ -1,9 +1,10 @@
 .navigation {
     height: 9vh;
     width: 100%;
-    background-color: var(--color1);
-    border-bottom: 2px solid var(--color2);
+    background-color: var(--color2);
+    border-bottom: 1px solid var(--color2);
     position: sticky;
+    padding: 0 5%;
     top: 0;
     z-index: 999;
 }
@@ -12,26 +13,29 @@
     height: 100%;
     width: auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 0;
     margin: 0;
-    color: var(--color2);
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
+}
+
+.navigation li.gfortiching {
+    margin-right: 5%;
 }
 
 .navigation li {
     margin: auto 10px;
     cursor: pointer;
-    color: var(--color1);
-    background-color: var(--color2);
     padding: 5px 10px;
     border-radius: 0.5em;
+    color: var(--color1);
 }
 
 .navigation li:hover {
-    color: #000;
     transition: 0.5s;
+    color: var(--color2);
+    background-color: var(--color1);
 }
 
 /* Nav Drawer */

@@ -1,56 +1,31 @@
-import React, {useState} from 'react';
+import React, { Component } from 'react';
 import "./css/Project2.css";
 
-const Temperature = () => {
-    
-    const [temperatureValue, setTemperatureValue] = useState(35);
-    const [temperatureColor, setTemperatureColor] = useState("neutral");
-
-    const increaseTemperature = () => {
-        if(temperatureValue === 100) return; 
-
-        const newTemperature = temperatureValue + 1;
-
-        if(newTemperature >= 41) {
-            setTemperatureColor('hot');
-        } 
-
-        if (newTemperature === 25) {
-            setTemperatureColor('neutral');
+class Counter extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            count: 0
         }
-        
-        setTemperatureValue(newTemperature)
     }
 
-    const decreaseTemperature = () => {
-        if(temperatureValue === -5) return; 
-
-        const newTemperature = temperatureValue - 1;
-
-        if(newTemperature <= 24) {
-            setTemperatureColor('cold');
-        } 
-        
-        if (newTemperature === 40) {
-            setTemperatureColor('neutral');
-        }
-        
-        setTemperatureValue(newTemperature)
+    increment = () => {
+        this.setState({count: this.state.count + 1})
     }
 
-    return (
-        <section className="temperature-body">
-        <div className='app-container'>
-            <div className="temperature-display-container">
-                <div className={`temperature-display ${temperatureColor}`}>{temperatureValue}°C</div>
+    decrement = () => {
+        this.setState({count: this.state.count - 1})
+    }
+
+    render() {
+        return (
+            <div className='simpleCounter'>
+                <button onClick={this.decrement} className='counter'>-</button>
+                <h2>{this.state.count}</h2>
+                <button onClick={this.increment} className='counter'>+</button>
             </div>
-            <div className="button-container">
-                <button onClick={()=> decreaseTemperature()}>-</button>
-                <button onClick={()=> increaseTemperature()}>+</button>
-            </div>
-        </div>
-        </section>
-    )
+        )
+    }
 }
 
-export default Temperature;
+export default Counter;

@@ -1,93 +1,80 @@
-import "./css/Project5.css"
-import React, { useState } from 'react';
+import "./css/Project5.css";
+import { useState } from "react";
 
-function ReactQuizApp() {
+function BasicRegistration() {
 
-    const questions = [
-		{
-			questionText: 'What is the capital of France?',
-			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
-			],
-		},
-		{
-			questionText: 'Who is CEO of Tesla?',
-			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: true },
-				{ answerText: 'Bill Gates', isCorrect: false },
-				{ answerText: 'Tony Stark', isCorrect: false },
-			],
-		},
-		{
-			questionText: 'The iPhone was created by which company?',
-			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
-			],
-		},
-		{
-			questionText: 'How many Harry Potter books are there?',
-			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
-			],
-		},
-	];
+    const [values, setValues] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+    });
 
-    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [submitted, setSubmitted] =useState(false);
 
-    const [showScore, setShowScore] = useState(false);
+    const handleFirstNameInputChange = (event) => {
+        setValues({...values, firstName: event.target.value})
+    }
 
-    const [score, setScore] = useState(0);
+    const handleLastNameInputChange = (event) => {
+        setValues({...values, lastName: event.target.value})
+    }
 
-    const handleAnswerButtonClick = (isCorrect) => {
-        if(isCorrect === true) {
-            setScore(score + 1);
-        }
+    const handleEmailInputChange = (event) => {
+        setValues({...values, email: event.target.value})
+    }
 
-        const nextQuestion = currentQuestion + 1;
-        if(nextQuestion < questions.length){
-            setCurrentQuestion(nextQuestion);
-        } else {
-            setShowScore(true);
-        }
-    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setSubmitted(true);
+    }
 
     return (
-        <div className="quiz-body">
-        <div className='quiz'>
-			{/* HINT: replace "false" with logic to display the 
-      score when the user has answered all the questions */}
-			{showScore ? (
-				<div className='score-section'>You scored {score} out of {questions.length}</div>
-			) : (
-				<>
-					<div className='question-section'>
-						<div className='question-count'>
-							<span>Question {currentQuestion + 1}</span>/{questions.length}
-						</div>
-						<div className='question-text'>{questions[currentQuestion].questionText}</div>
-					</div>
-					<div className='answer-section'>
-                        {questions[currentQuestion].answerOptions.map((answerOptions) => (
-                        <button onClick={ () => handleAnswerButtonClick(answerOptions.isCorrect)}>
-                            {answerOptions.answerText}
-                        </button>
-                        ))}
-					</div>
-				</>
-			)}
-		</div>
-        </div>
+        <div className="form-container">
+        <form className="register-form" onSubmit={handleSubmit}>
+          {/* Uncomment the next line to show the success message */}
+          <input
+            onChange={handleFirstNameInputChange}
+            value={values.firstName}
+            id="first-name"
+            className="form-field"
+            type="text"
+            placeholder="First Name"
+            name="firstName"
+            required
+          />
+          {/* Uncomment the next line to show the error message */}
+          <span id="first-name-error">Please enter a first name</span>
+          <input
+            onChange={handleLastNameInputChange}
+            value={values.lastName}
+            id="last-name"
+            className="form-field"
+            type="text"
+            placeholder="Last Name"
+            name="lastName"
+            required
+          />
+          {/* Uncomment the next line to show the error message */}
+          <span id="last-name-error">Please enter a last name</span>
+          <input
+            onChange={handleEmailInputChange}
+            value={values.email}
+            id="email"
+            className="form-field"
+            type="text"
+            placeholder="Email"
+            name="email"
+            required
+          />
+          {/* Uncomment the next line to show the error message */}
+          <span id="email-error">Please enter an email address</span>
+          <button className="form-field" type="submit">
+            Register
+          </button>
+          { submitted ? <div className="success-message">Success! Thank you for registering.</div> : null}
+        </form>
+      </div>
     )
 }
 
-export default ReactQuizApp;
+export default BasicRegistration;

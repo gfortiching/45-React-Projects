@@ -33,6 +33,16 @@
     box-shadow: 5px 5px 20px black;
 }
 
+.projects-section .project-title {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(19, 18, 18);
+    color: var(--white);
+    border-radius: 1em;
+    border: 3px solid white;
+    box-shadow: 5px 5px 20px black;
+}
+
 .projects-section h4 {
     margin: 0;
 }
