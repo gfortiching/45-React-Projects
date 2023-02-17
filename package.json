@@ -3,11 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://gfortiching.github.io/vite-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 8080"
   },
+  "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
