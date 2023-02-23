@@ -4,7 +4,7 @@
     margin: 5% auto 0;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0);
     padding: 5%;
-    background-color: var(--darkblue);
+    background-color: var(--color3);
     display: flex;
     justify-content: center;
     align-items: center;

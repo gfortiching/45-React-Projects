@@ -11,13 +11,12 @@
 :root {
     --primary-font: 'Arvo', serif;
     --secondary-font: 'Lato', sans-serif;
-    --lightblue: #516f99;
-    --darkblue: #252D4A;
+    --lightblue: #597eb2;
     --white: white;
     --black: black;
-    --gray: gray;
-    --color1: #e4faff;
-    --color2: #3E3F46;
+    --color1: #ecf6f9;
+    --color2: #152329;
+    --color3: #2b5870;
 }
 
 .app {

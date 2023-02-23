@@ -83,7 +83,7 @@
 .dashboardIcon {
     margin: 1em 0 0;
     padding: 0;
-    color: var(--color2);
+    color: var(--white);
 }
 
 @media all and (max-width: 768px) {

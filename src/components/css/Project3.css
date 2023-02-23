@@ -10,7 +10,6 @@
   .app-container {
     height: 300px;
     width: 250px;
-    background-color: var(--darkblue);
     border-radius: 20px;
     box-shadow: 10px 10px 38px 0px rgba(0, 0, 0, 0.75);
     margin: 5% auto;
@@ -62,7 +61,7 @@
   }
   
   .neutral {
-    background: #2b5870;
+    background: var(--color3);
   }
   
   .cold {
