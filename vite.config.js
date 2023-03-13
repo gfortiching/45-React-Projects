@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/vite-portfolio/',
+    base: '/45-React-Projects/',
 })
